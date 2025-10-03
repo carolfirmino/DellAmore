@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <h2></h2>
+
+    <nav class="menu-fixo">
+    
+            <button id="icone-carrinho">🛒 <span id="contador-carrinho">0</span></button>
+ 
+<!-- Carrinho oculto inicialmente -->
+<div id="carrinho-container">
+  <h3>Seu Carrinho</h3>
+  <ul id="carrinho"></ul>
+  <p><strong>Total: R$ <span id="total">0.00</span></strong></p>
+</div>
+         <div class="logo">
+        <img id="logo" src="imagens/logo.png">
+        </div>
+<!-- Produtos para adicionar -->
+
+        <ul>
+      
+            <li class="active"><a href="#pizza">🍕 Pizzas</a></li>
+            <li><a href="#bebidas">🥤Bebidas</a></li>
+            <li><a href="#acompanhamentos">🍟 Acompanhamentos</a></li>
+            <li><a href="#contato">📞 Contato</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <section id="pizza">
+            <div class="cards-container">
+  <div class="card">
+   <img src="pizzas/margherita.png" alt="Pizza Margherita">
+    <h3>Pizza Margherita</h3> 
+    <p>Molho de tomate, mussarela, manjericão fresco e azeite.</p>
+    <p>35 cm</p>
+    <p class="preco">R$ 59,90</p>
+     <button class="produto" onclick="adicionarProduto('Pizza Margherita', 59.90)">Adicionar ao Carrinho</button>
+  </div>
+
+  <div class="card">
+     <img src="pizzas/frango.png" alt="Pizza de Frango com Requeijão">
+    <h3>Pizza de Frango com Requeijão</h3>  
+    <p>Frango temperado, requeijão cremoso e mussarela gratinada.</p>
+    <p>35 cm</p>
+    <p class="preco">R$ 59,90</p> <button class="produto" onclick="adicionarProduto('Pizza Frango', 59.90)">Adicionar ao Carrinho</button>
+
+
+  </div>
+  <div class="card">
+     <img class="img-calabresa" src="pizzas/calabresa.png" alt="Pizza Calabresa">
+    <h3>Pizza Calabresa</h3>
+    <p>Calabresa fatiada, cebola roxa e mussarela.</p>
+    <p>35 cm</p>
+    <p class="preco">R$ 59,90</p>
+<button class="produto" onclick="adicionarProduto('Pizza Calabresa', 59.90)">Adicionar ao Carrinho</button>
+  </div>
+
+  <div class="card">
+    <img src="pizzas/4queijos.png" alt="Pizza 4 Queijos">
+    <h3>Pizza 4 Queijos</h3>
+    <p>Mussarela, parmesão, gorgonzola e catupiry.</p>
+    <p>35 cm</p>
+    <p class="preco">R$ 59,90</p>
+    <button class="produto" onclick="adicionarProduto('Pizza 4 Queijos', 59.90)">Adicionar ao Carrinho</button>
+  </div>
+</div>
+</div>
+
+            <div class="produtos">
+</div>
+        </section> 
+<section id="bebidas">
+  <div class="card1-container">
+    <div class="card1">
+      <img src="bebidas/pepsi.png" alt="Pepsi">
+      <h3>Pepsi</h3>
+      <p>2 Litros</p>
+      <p class="preco">R$ 10,90</p>
+      <button class="produto" onclick="adicionarProduto('Pepsi', 10.90)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="card1">
+      <img src="bebidas/coca.png" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>2 Litros</p>
+      <p class="preco">R$ 12,90</p>
+      <button class="produto" onclick="adicionarProduto('Coca-Cola', 12.90)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="card1">
+      <img src="bebidas/agua.png" alt="Água Mineral">
+      <h3>Água Mineral</h3>
+      <p>500 ml</p>
+      <p class="preco">R$ 5,90</p>
+      <button class="produto" onclick="adicionarProduto('Água Mineral', 5.90)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="card1">
+      <img src="bebidas/cerveja.png" alt="Cerveja Indústrial">
+      <h3>Cerveja</h3>
+      <p>330 ml</p>
+      <p class="preco">R$ 12,79</p>
+      <button class="produto" onclick="adicionarProduto('Cerveja Indústrial', 12.79)">Adicionar ao Carrinho</button>
+    </div>
+  </div>
+</section>
+        <section id="acompanhamentos">
+  <!-- Fritos -->
+  <div class="grid-produtos">
+    <div class="acomp-card">
+      <img src="acompanhamentos/batata.png" alt="Batata Tradicional">
+      <h4>Batata Tradicional</h4>
+      <p>Porção individual crocante e sequinha.</p>
+      <p class="preco">R$ 9,90</p>
+      <button onclick="adicionarProduto('Batata Tradicional', 9.90)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="acomp-card">
+      <img src="acompanhamentos/batatacheddar.png" alt="Batata com Cheddar e Bacon">
+      <h4>Batata com Cheddar e Bacon</h4>
+      <p>Porção individual crocante e sequinha.</p>
+      <p class="preco">R$ 12,90</p>
+      <button onclick="adicionarProduto('Batata com Cheddar e Bacon', 12.90)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="acomp-card">
+      <img src="acompanhamentos/iscas.png" alt="Iscas de Filé Crocante">
+      <h4>Iscas de Filé Crocante</h4>
+      <p>Filé de frango empanado e crocante, porção individual.</p>
+      <p class="preco">R$ 14,90</p>
+      <button onclick="adicionarProduto('Iscas de Filé Crocante', 14.90)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="acomp-card">
+      <img src="acompanhamentos/aneis.png" alt="Anéis de Cebola Fritos">
+      <h4>Anéis de Cebola Fritos</h4>
+      <p>Deliciosos anéis empanados e fritos até ficarem dourados.</p>
+      <p class="preco">R$ 11,90</p>
+      <button onclick="adicionarProduto('Anéis de Cebola Fritos', 11.90)">Adicionar ao Carrinho</button>
+    </div>
+  </div>
+  <!-- Molhos -->
+  <div class="grid-produtos">
+    <div class="acomp-card">
+      <img src="acompanhamentos/molhos/barbecue.png" alt="Barbecue Defumado">
+      <h4>Barbecue Defumado</h4>
+      <p>Agridoce com toque defumado.</p>
+      <p class="preco">R$ 4,00</p>
+      <button onclick="adicionarProduto('Barbecue Defumado', 4.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="acomp-card">
+      <img src="acompanhamentos/molhos/catupiry.png" alt="Catupiry">
+      <h4>Catupiry</h4>
+      <p>Cremoso, leve e delicioso.</p>
+      <p class="preco">R$ 4,00</p>
+      <button onclick="adicionarProduto('Catupiry', 4.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="acomp-card">
+      <img src="acompanhamentos/molhos/cheddar.png" alt="Cheddar Cremoso">
+      <h4>Cheddar Cremoso</h4>
+      <p>Sabor intenso e textura aveludada.</p>
+      <p class="preco">R$ 3,50</p>
+      <button onclick="adicionarProduto('Cheddar Cremoso', 3.50)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="acomp-card">
+      <img src="acompanhamentos/molhos/maionese.png" alt="Maionese Verde">
+      <h4>Maionese Verde</h4>
+      <p>Temperada, fresca e saborosa.</p>
+      <p class="preco">R$ 3,50</p>
+      <button onclick="adicionarProduto('Maionese Verde', 3.50)">Adicionar ao Carrinho</button>
+    </div>
+  </div>
+</section>
+        <section id="contato">
+<section class="contato">
+  <h2>Pizzaria Dell'Amore</h2>
+ <p class="frase-enfase">
+  Nos contate já e descubra o seu verdadeiro amor!
+</p>
+<div class="container-cartoes"></div>
+  <!-- Formulário ou informações de contato aqui -->
+   <section class="info-contato">
+  <div class="item-contato">
+    <span class="icone">🕒</span>
+    <div>
+      <h3>ATENDIMENTO</h3>
+      <p>Aberto todos os dias. Entregas das 18:30h às 23:15h.<br>
+      Atendimento local (retirada de encomendas) das 17:00h às 23:30h.</p>
+    </div>
+  </div>
+
+  <div class="item-contato">
+    <span class="icone">🏪</span>
+    <div>
+      <h3>ENDEREÇO</h3>
+      <p>Via Giudecca Vecchia, 39, 80139 Napoli NA, Itália</p>
+    </div>
+  </div>
+
+  <!-- Card Formas de Pagamento -->
+<div class="formas-pagamento">
+  <h2>Formas de<br>Pagamento:</h2>
+  <div class="icones-pagamento">
+    <img src="bandeiras/dinheiro.png" alt="Dinheiro">
+    <img src="bandeiras/elo.png" alt="Elo">
+    <img src="bandeiras/visa.png" alt="Visa">
+    <img src="bandeiras/master.png" alt="MasterCard">
+    <img src="bandeiras/ticket.png" alt="Ticket">
+  </div>
+</div>
+
+  <!-- Card Contatos -->
+  <div class="card-contato">
+    <h3><img src="redes/whatsappL.png" alt="WhatsApp" class="icon"> <a href="https://wa.me/SEUNUMERO" target="_blank">WhatsApp</a></h3>
+    <h3><img src="redes/insta.png" alt="Instagram" class="icon"> <a href="https://instagram.com/SEUUSUARIO" target="_blank">Instagram</a></h3>
+    <h3><img src="redes/gmail.png" alt="E-mail" class="icon"> <a href="mailto:contato@seudominio.com">E-mail</a></h3>
+  </div>
+</div>
+</div>
+
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
